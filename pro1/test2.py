@@ -1,0 +1,66 @@
+#연산자
+# 치환 연산자
+v1 = 3
+v1 = v2 = v3 = 5
+print(v1, v2, v3)
+
+v1 = 10, 20, 30
+print('v1 :', v1) #v1 : (10, 20, 30)
+v1, v2 = 10, 20
+print(v1, v2)
+v2, v1 = v1, v2 # 기억장소의 값 맞교환
+print(v1, v2)
+
+print('값 할당 packing')
+v1, *v2 = 1,2,3,4,5
+print(v1, v2) #1 [2,3,4,5]
+*v1, v2 = 1,2,3,4,5
+print(v1, v2) #[1,2,3,4] 5
+v1, v2, *v3 = 1,2,3,4,5
+print(v1, v2, v3) #1 2 [3,4,5]
+# 'v1, 'v2, v3 = 1,2,3,4,5 #err
+
+name = "마우스"; price = 5000
+print("이름 : name, 가격 : price")
+
+print('abc')
+print('def')
+print('abc', end=' ')
+print('def')
+
+print(5+3, 5-3, 5*3, 5/3, 5//3, 5%3, 5**3) # ** : 제곱 
+print(divmod(5,3))
+
+print((3 + 4 * 5), (3 + 4) * 5)
+#연산자 우선순위
+# () > ** > * / // % > + - > 비교연산자 > 논리연산자(not > and > or > =) > 치환연산자
+
+print('관계(비교) 연산자')
+print(5>3, 5 == 3, 5 != 3)
+print('논리 연산자')
+print(5 > 4 and 4 < 3, 5 > 4 or 4 < 3, not(5 >= 4))
+
+print('문자열 더하기')
+print('한' + '국' + '만세')
+
+print('누적')
+a = 10
+a = a + 1
+a += 1 #증감 연산자
+print('a는', a)
+print(f'a는 {a}')
+
+print('부호 변경 : ', a, a*-1, -a, --a, ---a)
+
+print('boolean 처리 : ', bool(123), bool(1), bool(-3.5), bool(True))
+print('boolean 처리 : ', bool(0), bool(0.0), bool(False), bool(None))
+print('boolean 처리 : ', bool([]), bool({}), bool(set()))
+
+print('이스케이프 문자')
+print('aa\tbb')
+print(r'aa\tbb')
+print('aa\tbb')
+print(r'aa\tbb')
+print('aa\nbb')
+print(r'c:\a\abc.txt')
+print('c:\n\abc.txt')
